@@ -35,4 +35,5 @@ export class CreateAnAccountPage{
     async clickRegisterButton(){
         await this.registerBtn.click();
     }
+
 }

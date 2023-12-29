@@ -5,6 +5,8 @@
 
 - instal dependencies
   `npm i`
+  - instal playwright
+  `npx playwright install`
 - run tests without browser GUI:  
   `npx playwright test`
 - run test with browser GUI:  

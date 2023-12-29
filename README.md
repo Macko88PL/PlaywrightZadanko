@@ -1,9 +1,9 @@
-# PlaywrightZadanko
+# PlaywrightZadanko/n
 
 
-run tests without browser GUI:
-npx playwright test
-run test with browser GUI:
-npx playwright test --headed
-viewing report
-npx playwright show-report
+run tests without browser GUI:/n
+npx playwright test/n
+run test with browser GUI:/n
+npx playwright test --headed/n
+viewing report/n
+npx playwright show-report/n

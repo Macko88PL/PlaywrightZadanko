@@ -1,9 +1,18 @@
 # PlaywrightZadanko/n
 
 
-run tests without browser GUI:/n
-npx playwright test/n
-run test with browser GUI:/n
-npx playwright test --headed/n
-viewing report/n
-npx playwright show-report/n
+## Commands
+
+- instal dependencies
+  `npm i`
+- run tests without browser GUI:  
+  `npx playwright test`
+- run test with browser GUI:  
+  `npx playwright test --headed`
+- viewing report  
+  `npx playwright show-report`
+
+## GitHub
+
+- project code: https://github.com/Macko88PL/PlaywrightZadanko
+- CI/CD (Actions): https://github.com/Macko88PL/PlaywrightZadanko/actions

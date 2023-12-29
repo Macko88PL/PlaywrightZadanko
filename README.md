@@ -1,4 +1,4 @@
-# PlaywrightZadanko/n
+# PlaywrightZadanko
 
 
 ## Commands

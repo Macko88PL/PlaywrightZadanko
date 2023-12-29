@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "baseUrl": "http://www.automationpractice.pl/index.php",
+      "paths": {
+        "@_pw-config": ["playwright.config.ts"],
+        "@_pages/*": ["pages/*"]
+      }
+    }
+  }
+  

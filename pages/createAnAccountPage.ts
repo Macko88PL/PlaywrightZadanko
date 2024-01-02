@@ -14,6 +14,7 @@ export class CreateAnAccountPage{
     mounthsBirth = this.page.locator("#months");
     yearBirth = this.page.locator("#years");
     registerBtn = this.page.locator("#submitAccount > span");
+    checkAccountCreate = this.page.locator(".account > span");
 
     async fillPersonalInformation(){
         const firstName = DataGenerator.generateFirstName();
@@ -30,6 +31,12 @@ export class CreateAnAccountPage{
         await this.dayBirth.selectOption({value: dayBirth});
         await this.mounthsBirth.selectOption({value: mounthsBirth});
         await this.yearBirth.selectOption({value: yearBirth});
+
+        return {firstName, lastName}
+    }
+
+    async checkCreateAccount(firstName, lastName){
+        await expect(this.checkAccountCreate).toContainText(firstName+" "+lastName);
     }
 
     async clickRegisterButton(){

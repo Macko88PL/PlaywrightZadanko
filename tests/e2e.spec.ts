@@ -31,17 +31,26 @@ test.describe('E2E Buy Dress', ()=>{
     })
 
     test('E2E Buy Dresses',async ({page}) => {
+
         await homePage.checkVisibilityLogo()
         await homePage.signButtonClick()
         await authenticationPage.accountCreatEmail()
-        await createAnAccountPage.fillPersonalInformation();
+        
+        const personalInfo = await createAnAccountPage.fillPersonalInformation();
+
         await createAnAccountPage.clickRegisterButton();
+        await createAnAccountPage.checkCreateAccount(personalInfo.firstName, personalInfo.lastName);
         await myAccountPage.selectDressesTab();
         await dressesPage.selectDress();
         await dressesPage.proceedToCheckout();
+        await shoppingCartSummaryPage.checkProduct();
         await shoppingCartSummaryPage.proceedToCheckout();
-        await yourAddressesPage.fillAdressData();
+        
+        const addressData = await yourAddressesPage.fillAdressData();
+
         await yourAddressesPage.clickSaveButton();
+        await yourAddressesPage.checkDeliveryAddress(addressData.address, addressData.city, addressData.state, addressData.postalCode, addressData.mobilePhone);
+        await yourAddressesPage.checkBillingAddress(addressData.address, addressData.city, addressData.state, addressData.postalCode, addressData.mobilePhone);
         await orderConfirmationAndPayment.orderConfirmationAndPayment();
         await orderConfirmationAndPayment.checkOrderWithPayment();
         
